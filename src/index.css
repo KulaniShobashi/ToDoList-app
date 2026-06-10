@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 720px;
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.todo-card h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.todo-card p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+.user-panel {
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.user-panel p {
+  margin: 0;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.user-controls {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0 0;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.control-group input,
+.control-group select {
+  width: 180px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+
+
+.permission-table {
+  margin: 20px 0;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+.permission-table h3 {
+  margin-top: 0;
+}
+
+.permission-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.permission-table th,
+.permission-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.permission-table td:first-child,
+.permission-table th:first-child {
+  text-align: left;
+}
+
+
+
+.topic-input-row,
+.subtopic-input-row {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+
+
+.topic-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 22px;
+  margin-top: 20px;
+}
+
+.topic-card.deleted {
+  opacity: 0.65;
+}
+
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.topic-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.topic-title-row input[type="checkbox"],
+.subtopic-title input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin-top: 4px;
+  accent-color: #6366f1;
+}
+
+.topic-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+
+
+.delete-btn,
+.delete-selected-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover,
+.delete-selected-btn:hover {
+  background: #dc2626;
+}
+
+.delete-selected-btn {
+  margin-top: 12px;
+}
+
+
+
+.subtopic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subtopic-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: white;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.subtopic-item.deleted {
+  opacity: 0.65;
+}
+
+.subtopic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.subtopic-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.subtopic-title div {
+  flex: 1;
+  min-width: 0;
+}
+
+.subtopic-item textarea {
+  width: 100%;
+  min-height: 72px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.subtopic-delete-btn {
+  flex: 0 0 auto;
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 6px 12px;
+}
+
+.subtopic-delete-btn:hover {
+  background: #fecaca;
+}
+
+
+
+.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.deleted-marker {
+  margin: 4px 0 0;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+}
